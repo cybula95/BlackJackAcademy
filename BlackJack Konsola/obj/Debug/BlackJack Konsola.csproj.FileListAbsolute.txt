@@ -1,0 +1,6 @@
+C:\Users\Piotrek\Desktop\BlackJack Konsola\BlackJack Konsola\bin\Debug\BlackJack Konsola.exe.config
+C:\Users\Piotrek\Desktop\BlackJack Konsola\BlackJack Konsola\obj\Debug\BlackJack Konsola.csprojResolveAssemblyReference.cache
+C:\Users\Piotrek\Desktop\BlackJack Konsola\BlackJack Konsola\bin\Debug\BlackJack Konsola.exe
+C:\Users\Piotrek\Desktop\BlackJack Konsola\BlackJack Konsola\bin\Debug\BlackJack Konsola.pdb
+C:\Users\Piotrek\Desktop\BlackJack Konsola\BlackJack Konsola\obj\Debug\BlackJack Konsola.exe
+C:\Users\Piotrek\Desktop\BlackJack Konsola\BlackJack Konsola\obj\Debug\BlackJack Konsola.pdb
