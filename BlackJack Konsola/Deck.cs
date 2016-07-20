@@ -9,11 +9,11 @@ namespace BlackJack_Konsola
 
     public class Deck : List<Card>
     {
-        public static string[] symbols = { "2", "3", "4", "5", "6", "7", "8", "9", "10", "A", "J", "Q", "K" };
+        private static string[] symbols = { "2", "3", "4", "5", "6", "7", "8", "9", "10", "A", "J", "Q", "K" };
 
-        public static string[] colors = { "Kier", "Karo", "Trefl", "Pik" };
+        private static string[] colors = { "Kier", "Karo", "Trefl", "Pik" };
 
-        public void NewDeck()
+        private void NewDeck()
         {
             int value;
             foreach (string color in colors)
@@ -32,7 +32,7 @@ namespace BlackJack_Konsola
             ToShuffle.NewDeck();
             Random rand = new Random();
             int next;
-            while (ToShuffle.Count !=0)
+            while (ToShuffle.Count != 0)
             {
                 next = rand.Next(0, ToShuffle.Count - 1);
                 Shuffled.Add(ToShuffle[next]);

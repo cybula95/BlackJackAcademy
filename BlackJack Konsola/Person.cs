@@ -8,7 +8,11 @@ namespace BlackJack_Konsola
 {
     public class Person
     {
-        public Hand Hand;
+        public Hand Hand
+        {
+            get;
+        }
+
         public Person()
         {
             Hand = new Hand();

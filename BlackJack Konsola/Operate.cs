@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BlackJack_Konsola
 {
-    public enum GameResult { Won = 1, Lost = -1, Tie = 0 , Pending =2}
+    public enum GameResult { Won = 1, Lost = -1, Tie = 0, Pending = 2 }
     public static class Operate
     {
 

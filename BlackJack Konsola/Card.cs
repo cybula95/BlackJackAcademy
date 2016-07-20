@@ -8,11 +8,12 @@ namespace BlackJack_Konsola
 {
     public class Card
     {
-        public string Symbol { get; set; }
-        public string Color { get; set; }
-        public int Value { get; set; }
+        public string Symbol { get; }
+        public string Color { get; }
+        public int Value { get; }
 
-        public Card(string symbol, string color, int value) {
+        public Card(string symbol, string color, int value)
+        {
             Symbol = symbol;
             Color = color;
             Value = value;

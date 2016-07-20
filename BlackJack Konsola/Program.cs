@@ -8,7 +8,7 @@ namespace BlackJack_Konsola
 {
     class Program
     {
-        public static void ShowState(Game game)
+        private static void ShowState(Game game)
         {
 
             Console.WriteLine(Environment.NewLine);

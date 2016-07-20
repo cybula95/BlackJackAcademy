@@ -10,7 +10,7 @@ namespace BlackJack_Konsola
     {
         public Person Dealer = new Person();
         public Person Player = new Person();
-        public Deck MainDeck;
+        private Deck MainDeck;
         public GameResult Result { get; set; }
 
 
@@ -30,19 +30,25 @@ namespace BlackJack_Konsola
             Player.Hand.Add(MainDeck.First());
             MainDeck.RemoveAt(0);
         }
-        public void Hit() {
-            if (Operate.IsHitPossible(Player.Hand) && Result == GameResult.Pending) {
+        public void Hit()
+        {
+            if (Operate.IsHitPossible(Player.Hand) && Result == GameResult.Pending)
+            {
                 Player.Hand.Add(MainDeck.First());
                 MainDeck.RemoveAt(0);
-                if (!Operate.IsHitPossible(Player.Hand)){
+                if (!Operate.IsHitPossible(Player.Hand))
+                {
                     this.Stand();
                 }
             }
         }
 
-        public void Stand() {
-            if (Result == GameResult.Pending) {
-                while (Operate.DoesDealerHit(Dealer.Hand)) {
+        public void Stand()
+        {
+            if (Result == GameResult.Pending)
+            {
+                while (Operate.DoesDealerHit(Dealer.Hand))
+                {
                     Dealer.Hand.Add(MainDeck.First());
                     MainDeck.RemoveAt(0);
                 }
