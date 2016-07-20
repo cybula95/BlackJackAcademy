@@ -8,23 +8,23 @@ namespace BlackJack_Konsola
 {
     class Program
     {
-        public static void PokazStan(Rozgrywka gra)
+        public static void ShowState(Game game)
         {
 
             Console.WriteLine(Environment.NewLine);
             Console.WriteLine("Dealer:");
-            foreach (Karta k in gra.Dealer.Reka)
+            foreach (Card k in game.Dealer.Hand)
             {
-                Console.WriteLine(string.Format("{0} {1}", k.Symbol, k.Kolor));
+                Console.WriteLine(string.Format("{0} {1}", k.Symbol, k.Color));
             }
-            Console.WriteLine("\nSuma: " + gra.Dealer.Reka.Wartosc);
+            Console.WriteLine("\nSuma: " + game.Dealer.Hand.Value);
 
             Console.WriteLine("\nGracz:");
-            foreach (Karta k in gra.Gracz.Reka)
+            foreach (Card k in game.Player.Hand)
             {
-                Console.WriteLine(string.Format("{0} {1}", k.Symbol, k.Kolor));
+                Console.WriteLine(string.Format("{0} {1}", k.Symbol, k.Color));
             }
-            Console.WriteLine("\nSuma: " + gra.Gracz.Reka.Wartosc);
+            Console.WriteLine("\nSuma: " + game.Player.Hand.Value);
 
 
         }
@@ -39,29 +39,29 @@ namespace BlackJack_Konsola
             while (true)
             {
                 string input = "";
-                Rozgrywka gra = new Rozgrywka();
+                Game game = new Game();
 
 
-                PokazStan(gra);
-                while (gra.Wynik == WynikGry.Trwa)
+                ShowState(game);
+                while (game.Result == GameResult.Pending)
                 {
                     input = Console.ReadLine();
                     if (input.ToLower() == "h")
                     {
-                        gra.Hit();
+                        game.Hit();
                     }
                     else if (input.ToLower() == "s")
                     {
-                        gra.Stand();
+                        game.Stand();
                     }
                     else
                     {
                         Console.WriteLine("Zla komenda. Sprobuj jeszcze raz.");
                     }
-                    PokazStan(gra);
+                    ShowState(game);
                 }
 
-                Console.WriteLine("\n" + gra.Wynik + "\n");
+                Console.WriteLine("\n" + game.Result + "\n");
                 Console.WriteLine("Wpisz cokolwiek, aby rozpoczac nowe rozdanie");
                 Console.ReadLine();
             }
